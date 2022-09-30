@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#container {
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#sidebar {
+    height: 100vh;
+    position: relative;
+    z-index: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sideBarItem {
+    height: 3rem;
+    padding: 0rem 1rem;
+    margin: .5rem 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.selectedSideBarItem {
+    height: 4rem;
+    margin: 0rem 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sideBarItemTitle {
+    margin: 0 2rem;
+    text-transform: uppercase;
+}
+
+.sideBarItemImg {
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.sideBarItem:hover {
+    background-color: #000;
+}
+
+#sideBarMain::-webkit-scrollbar {
+    width: 0;
+}
+
+#sidebar::webkit-scrollbar {
+    width: 0;
+}
+
+#mainContainer {
+    flex: 1;
+    height: 92vh;
+    position: relative !important;
+    top: 8vh;
+    z-index: 0;
+    overflow: hidden;
+}
+
+#mainContent {
+    width: 100%;
+    height: 92vh;
+    overflow-y: scroll;
+    padding: 2rem;
+    left: 0;
 }
