@@ -15,43 +15,43 @@ const SideBar = () => {
   const sideBarContext = useContext(SideBarModeContext);
   const tabList = [
     {
-      title: "lorem",
+      title: "lorem1",
       key: useId(),
       icon: "https://images.unsplash.com/photo-1532779952550-b8fc9200ed8c?ixid=MnwxMTI1OHwwfDF8cmFuZG9tfHx8fHx8fHx8MTY2NDUwOTQ1Ng&ixlib=rb-1.2.1&q=85&w=3120",
       choosed: false,
     },
     {
-      title: "lorem",
+      title: "lorem2",
       key: useId(),
       icon: "https://images.unsplash.com/photo-1532779952550-b8fc9200ed8c?ixid=MnwxMTI1OHwwfDF8cmFuZG9tfHx8fHx8fHx8MTY2NDUwOTQ1Ng&ixlib=rb-1.2.1&q=85&w=3120",
       choosed: false,
     },
     {
-      title: "lorem",
+      title: "lorem3",
       key: useId(),
       icon: "https://images.unsplash.com/photo-1532779952550-b8fc9200ed8c?ixid=MnwxMTI1OHwwfDF8cmFuZG9tfHx8fHx8fHx8MTY2NDUwOTQ1Ng&ixlib=rb-1.2.1&q=85&w=3120",
       choosed: false,
     },
     {
-      title: "lorem",
+      title: "lorem4",
       key: useId(),
       icon: "https://images.unsplash.com/photo-1532779952550-b8fc9200ed8c?ixid=MnwxMTI1OHwwfDF8cmFuZG9tfHx8fHx8fHx8MTY2NDUwOTQ1Ng&ixlib=rb-1.2.1&q=85&w=3120",
       choosed: false,
     },
     {
-      title: "lorem",
+      title: "lorem5",
       key: useId(),
       icon: "https://images.unsplash.com/photo-1532779952550-b8fc9200ed8c?ixid=MnwxMTI1OHwwfDF8cmFuZG9tfHx8fHx8fHx8MTY2NDUwOTQ1Ng&ixlib=rb-1.2.1&q=85&w=3120",
       choosed: false,
     },
     {
-      title: "lorem",
+      title: "lorem6",
       key: useId(),
       icon: "https://images.unsplash.com/photo-1532779952550-b8fc9200ed8c?ixid=MnwxMTI1OHwwfDF8cmFuZG9tfHx8fHx8fHx8MTY2NDUwOTQ1Ng&ixlib=rb-1.2.1&q=85&w=3120",
       choosed: false,
     },
     {
-      title: "lorem",
+      title: "lorem7",
       key: useId(),
       icon: "https://images.unsplash.com/photo-1532779952550-b8fc9200ed8c?ixid=MnwxMTI1OHwwfDF8cmFuZG9tfHx8fHx8fHx8MTY2NDUwOTQ1Ng&ixlib=rb-1.2.1&q=85&w=3120",
       choosed: false,
@@ -67,7 +67,7 @@ const SideBar = () => {
     let tempList = [...tabList];
     tempList[index].choosed = true;
     setBarList([...tempList]);
-    navigate(`/projects/${item.key}`, item);
+    navigate(`/projects/${item.title}`, { project: item, index: index });
   };
   return (
     <div

@@ -16,6 +16,9 @@ const router = createBrowserRouter([
         children: [
           {
             path: ":project",
+            loader: ({ params }) => {
+              console.log(params);
+            },
             element: <ProjectDetail />,
           },
         ],

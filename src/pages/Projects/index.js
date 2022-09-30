@@ -3,10 +3,11 @@ import { Outlet } from "react-router-dom";
 const Projects = () => {
   return (
     <div>
-      Projects
+      Projects / 
       <Outlet />
     </div>
   );
 };
 
 export default Projects;
+

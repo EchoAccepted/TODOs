@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 const ProjectDetails = () => {
-  return (
-    <div>ProjectDetails</div>
-  )
-}
+  const project = useParams().project;
 
-export default ProjectDetails
+  return <span> {project}</span>;
+};
+
+export default ProjectDetails;
+
